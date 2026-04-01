@@ -25,16 +25,15 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
       <a href="#" className="nav-logo">
-        A<span>.</span>
+        AK<span>.</span>
       </a>
 
       <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Work</a>
         <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
-        <a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Testimonials</a>
-        <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="nav-contact-btn">
-          Let's Talk
-        </a>
+        <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Work</a>
+        <a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Resume</a>
+        <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
+        <div className="nav-status-dot" title="Available for work" />
       </div>
 
       <button

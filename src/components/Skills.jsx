@@ -1,6 +1,7 @@
 const skills = [
-  'React', 'Figma', 'Product Design', 'Branding', 'Prototyping',
-  'Design Systems', 'UX Research', 'Motion Design', 'Webflow', 'Framer',
+  'Design Systems', '0→1 Products', 'UX Architecture', 'Vibe Coding',
+  'Figma', 'React', 'AI Tools', 'Systems Thinking', 'Prototyping',
+  'User Research', 'Enterprise UX', 'Interaction Design',
 ];
 
 export default function Skills() {

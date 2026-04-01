@@ -31,8 +31,8 @@ export default function Contact() {
             Have a project in mind? I'd love to hear about it. Let's discuss how
             we can work together to bring your vision to life.
           </p>
-          <a href="mailto:hello@ashish.design" className="contact-email">
-            hello@ashish.design
+          <a href="mailto:ashish.khoshya@gmail.com" className="contact-email">
+            ashish.khoshya@gmail.com
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M5 15L15 5M15 5H8M15 5v7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -42,7 +42,7 @@ export default function Contact() {
 
       <footer className="footer">
         <div className="footer-left">
-          &copy; 2024 Ashish. Built with <span>&hearts;</span> and purpose.
+          &copy; 2024 Ashish Khoshya. Built with <span>&hearts;</span> and purpose.
         </div>
         <div className="footer-social">
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>

@@ -28,7 +28,7 @@ export default function About() {
           variants={fadeLeft}
         >
           <div className="about-image-placeholder">
-            <div className="about-avatar">A</div>
+            <div className="about-avatar">AK</div>
           </div>
           <div className="about-image-accent" />
         </motion.div>
@@ -44,29 +44,31 @@ export default function About() {
           <h3>
             Designing for <span>impact</span>,
             <br />
-            driven by purpose.
+            driven by empathy.
           </h3>
           <p className="about-text">
-            I'm a product designer with a passion for crafting digital experiences
-            that make complex things feel simple. With expertise spanning fintech,
-            banking, and web3, I bring a human-centered approach to every project.
+            I'm Ashish Khoshya — a Senior Product Designer with 4+ years of experience
+            turning complex enterprise software into experiences people understand,
+            trust, and enjoy.
             <br /><br />
-            By combining design thinking, brand strategy, and meticulous execution,
-            I help businesses create products that users genuinely love.
+            My approach combines empathy, clarity, and systems thinking. From design
+            systems to 0→1 products, UX architecture to vibe coding — I bring a
+            human-centered lens to every challenge. IIT Guwahati alumnus, now
+            stitching it all together with AI.
           </p>
 
           <div className="about-stats">
             <div className="stat-item">
-              <div className="stat-number">5+</div>
+              <div className="stat-number">4+</div>
               <div className="stat-label">Years Exp.</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">30+</div>
+              <div className="stat-number">20+</div>
               <div className="stat-label">Projects</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Clients</div>
+              <div className="stat-number">IIT</div>
+              <div className="stat-label">Guwahati</div>
             </div>
           </div>
         </motion.div>
