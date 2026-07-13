@@ -1,49 +1,22 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleNavClick = (e, id) => {
-    e.preventDefault();
-    setMenuOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
+export default function Navbar({ onOpenGoals }) {
   return (
     <motion.nav
-      className={`navbar ${scrolled ? 'scrolled' : ''}`}
+      className="navbar scrolled"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
       <a href="#" className="nav-logo">
-        AK<span>.</span>
+        Health<span>+</span>
       </a>
 
-      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
-        <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Work</a>
-        <a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Resume</a>
-        <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
-        <div className="nav-status-dot" title="Available for work" />
-      </div>
-
-      <button
-        className={`nav-toggle ${menuOpen ? 'open' : ''}`}
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-      >
-        <span />
-        <span />
-        <span />
+      <button className="nav-settings-btn" onClick={onOpenGoals} aria-label="Edit goals" title="Edit goals">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34H9a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87V9a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z" />
+        </svg>
       </button>
     </motion.nav>
   );
